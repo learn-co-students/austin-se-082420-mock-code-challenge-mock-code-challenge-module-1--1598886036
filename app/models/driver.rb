@@ -27,14 +27,14 @@ class Driver
     def rides 
         #Returns an array of all Rides a 
         #driver has made
-        Ride.all.select{|ride|driver == self}
+        Ride.all.select{|ride|ride.driver == self}
     end
 
     def self.mileage_cap(distance)
         Ride.all.map do |rides|
             over_mileage = []
-            if Ride.distance > #what mileage?
-                over_milage << self
+            if Ride.distance > distance
+                over_milage << ride.driver
             end
             over_mileage
         end

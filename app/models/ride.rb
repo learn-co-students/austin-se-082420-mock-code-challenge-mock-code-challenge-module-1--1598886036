@@ -19,7 +19,7 @@ class Ride
     end
 
     def self.driver
-        @driver
+        @driver 
     end
 
     def self.distance

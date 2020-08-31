@@ -1,4 +1,4 @@
-
+require 'pry'
 class Passenger
     attr_reader: :name
 
@@ -12,7 +12,7 @@ class Passenger
         @@all
     end
     
-    def self.name
+    def name
         @name
     end
 
@@ -27,17 +27,28 @@ class Passenger
     # that this person has rode with
     Driver.all.map do |driver|
         my_drivers = []
-        if Driver.passenger == self
-            my_drivers << self
+        if Driver.passenger_names == self
+            my_drivers << Driver.name
         end
-    my_drivers
+         my_drivers
+        end
     end
-    end
-
+    #Would this be a better approach?
+        # Driver.select do |driver|
+        #     Driver.passenger_names == self
+        #   end
+        #end
+binding.pry
     def self.premium_members
     #Returns an array of all Passengers 
     #who have travelled over 100 miles in 
     #total with the service
-
+   
     end
 end
+
+#full disclosure: I don't really understand how to 
+#run pry when working with multiple files. Hence, I broke 
+#a cardinal rule of coding and did not test my code 
+#every step of the way.
+ 
