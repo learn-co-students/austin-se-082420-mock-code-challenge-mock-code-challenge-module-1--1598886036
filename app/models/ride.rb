@@ -25,13 +25,13 @@ class Ride
         @@all
     end
 
-    # def self.average_distance
-    #     average = 0 
-    #     Ride.all.select do |r|
-    #         r.distance
-    #         sum = sum + r.distance
-    
-    #      end
-    #     sum / (Ride.all.count).to_f
-    # end
+    def self.average_distance
+        average = 0 
+        Ride.all.select do |r|
+            if r.distance > 0
+                average = average + r.distance
+            end
+         end
+        average / (Ride.all.count).to_f
+    end
 end
