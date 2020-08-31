@@ -4,7 +4,16 @@ def reload
   load 'config/environment.rb'
 end
 
+cory = Passenger.new("Cory Simone")
+teddy = Passenger.new("Teddy Bear")
+porkers = Passenger.new("Porkers")
 
-# Put your variables here~!
+john = Driver.new("John Lonetree (no relation)")
+chad = Driver.new("Chadly Chadderton")
 
-binding.pry
+cambridge = Ride.new(john, cory, 25)
+dayton = Ride.new(chad, teddy, 50)
+porksburg = Ride.new(john, porkers, 150)
+
+# binding.pry
+# 0
