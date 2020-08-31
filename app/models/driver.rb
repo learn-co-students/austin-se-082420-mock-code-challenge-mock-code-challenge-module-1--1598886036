@@ -3,7 +3,10 @@ require "pry"
 
 def class Driver
     attr_accessor :name
-   def initialize
+
+    @@all = []
+   
+    def initialize(name)
         
     end
 
@@ -21,7 +24,7 @@ def class Driver
     end
 
     def self.all
-
+@@all
     end
 
     def self.mileage_cap(distance)
