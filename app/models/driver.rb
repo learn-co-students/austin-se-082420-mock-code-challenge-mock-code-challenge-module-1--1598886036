@@ -25,8 +25,11 @@ class Driver
         @@all
     end
 
-    def self.passenger_names
-        binding.pry
+    def passenger_names
+        Ride.all.select do |rides|
+            rides.map do |ride.driver == self|
+            end
+        end
     end
 
     def self.rides(person)
