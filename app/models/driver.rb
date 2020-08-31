@@ -17,7 +17,20 @@ class Driver
 
     def passenger_names
         Passenger.all.map do |passenger|
-            binding.pry
+            passenger.name.uniq
         end
+    end
+
+    def rides
+        Ride.all.map do |rides|
+            rides.driver
+    end
+
+    def self.milage_cap(distance)
+        distance = 50
+
+        Ride.all.map do |rides|
+        end
+
     end
 end

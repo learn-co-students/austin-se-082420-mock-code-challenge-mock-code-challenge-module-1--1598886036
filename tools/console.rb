@@ -13,7 +13,7 @@ chad = Driver.new("Chadly Chadderton")
 
 cambridge = Ride.new(john, cory, 25)
 dayton = Ride.new(chad, teddy, 50)
-porksburg = Ride.new(john, porkers, 100)
+porksburg = Ride.new(john, porkers, 150)
 
-binding.pry
-0
+# binding.pry
+# 0

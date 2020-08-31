@@ -33,10 +33,19 @@ class Ride
     end
 
     def distance
-        
+        self.distance.to_f
     end
 
-    def self.average_driver
+    def self.average_distance
+        # returns average distance
+        self.all.each do |rides|
+            total = (rides.distance[0] + rides.distance[1] + rides.distance[2]).to_f
+            if total /= rides.length
+                average_distance = total
+                # binding.pry
+            end
+            # binding.pry
+        end
     end
 
 end
