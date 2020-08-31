@@ -29,10 +29,23 @@ class Driver
         binding.pry
     end
 
-    def self.rides
-        self.collect do |ride|
-            binding.pry
+    def self.rides(person)
+        arr=[]
+        Ride.all.each do |ride|
+            #binding.pry
+            if ride.driver == person
+                arr << ride
+            else 
+                arr << "This driver has not had any drives."
+            end
+            return arr
+
         end
     end
+
+    def self.mileage_cap(d_distance)
+    end
+        
+
 
 end

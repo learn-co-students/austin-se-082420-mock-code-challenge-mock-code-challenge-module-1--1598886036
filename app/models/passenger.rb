@@ -29,11 +29,14 @@ class Passenger
         @@all
     end
 
-    def self.rides
-        binding.pry
-        puts "Hi"
+    def self.rides(pass)
+        arr = [] 
+        Ride.all.select do |ride|
+            if ride.passenger == pass
+                arr << ride
+            end
+            return arr
+        end
     end
-
-
 
 end

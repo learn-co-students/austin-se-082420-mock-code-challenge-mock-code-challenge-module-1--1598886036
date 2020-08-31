@@ -48,6 +48,7 @@ end
 
 p1 = Passenger.new("Jake")
 d1 = Driver.new("Juanito")
+d2 = Driver.new("John")
 r1 = Ride.new(d1,p1,"20")
 r2 = Ride.new(d1,p1,"10")
 
